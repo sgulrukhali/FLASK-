@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}Home - PowerFit Gym{% endblock %}
+
+{% block content %}
+<section class="hero" id="home">
+    <div class="hero-content">
+        <h2>Transform Your Body, Transform Your Life</h2>
+        <p>Unlock your full potential with expert trainers, modern equipment, and a community that keeps you motivated every day.</p>
+        <a href="{{ url_for('membership') }}" class="btn">Join Now</a>
+    </div>
+
+    <div class="hero-img">
+        <img 
+            src="https://images.unsplash.com/photo-1579758629938-03607ccdbaba?auto=format&fit=crop&w=900&q=80" 
+            alt="PowerFit Gym Training"
+        >
+    </div>
+</section>
+{% endblock %}

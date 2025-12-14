@@ -1,0 +1,298 @@
+/* ===========================
+   Global Styles
+=========================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #f8f9fa;
+    color: #333;
+    scroll-behavior: smooth;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ===========================
+   Header / Navbar
+=========================== */
+header {
+    background-color: #1c1c2b;
+    color: #fff;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header .logo {
+    font-size: 28px;
+    color: #ff4d6d;
+}
+
+header nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+header nav a:hover {
+    color: #ff4d6d;
+}
+
+/* ===========================
+   Hero Section
+=========================== */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 60px 0;
+    background: linear-gradient(120deg, #ff4d6d, #ff7a5c);
+    color: #fff;
+    border-radius: 0 0 50px 50px;
+    text-align: left;
+}
+
+.hero-content {
+    flex: 1;
+    min-width: 300px;
+    padding-right: 20px;
+}
+
+.hero-content h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.hero-content .btn {
+    background-color: #fff;
+    color: #ff4d6d;
+    padding: 12px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.hero-content .btn:hover {
+    background-color: #ff4d6d;
+    color: #fff;
+}
+
+.hero-img {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-img img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+/* ===========================
+   About Section
+=========================== */
+.about {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    padding: 60px 0;
+}
+
+.about-img,
+.about-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.about-img img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.about-text h2 {
+    color: #ff4d6d;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+/* ===========================
+   Membership Plans
+=========================== */
+.plans {
+    background-color: #fff;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.plans h2 {
+    font-size: 36px;
+    color: #ff4d6d;
+    margin-bottom: 50px;
+}
+
+.plan-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.plan-card {
+    background-color: #f1f3f6;
+    padding: 30px;
+    border-radius: 20px;
+    width: 300px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.plan-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 40px rgba(0,0,0,0.2);
+}
+
+.plan-card h3 {
+    color: #ff4d6d;
+    margin-bottom: 15px;
+}
+
+.plan-card p {
+    margin-bottom: 20px;
+}
+
+.plan-card .btn {
+    background-color: #ff4d6d;
+    color: #fff;
+    padding: 10px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.plan-card .btn:hover {
+    background-color: #ff7a5c;
+}
+
+/* ===========================
+   Footer
+=========================== */
+footer {
+    background-color: #1c1c2b;
+    color: #fff;
+    text-align: center;
+    padding: 40px 0;
+}
+
+/* ===========================
+   Responsive Media Queries
+=========================== */
+
+/* Tablets */
+@media (max-width: 1024px) {
+    header .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav {
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .hero, .about {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-img img, .about-img img {
+        margin-top: 20px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .hero-content h2 {
+        font-size: 36px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    .about-text h2 {
+        font-size: 28px;
+    }
+
+    .about-text p {
+        font-size: 16px;
+    }
+
+    .plan-card {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+/* Small Phones */
+@media (max-width: 480px) {
+    .hero-content h2 {
+        font-size: 28px;
+    }
+
+    .hero-content p {
+        font-size: 14px;
+    }
+
+    .plans h2 {
+        font-size: 28px;
+    }
+
+    .about-text h2 {
+        font-size: 24px;
+    }
+
+    .about-text p {
+        font-size: 14px;
+    }
+}
